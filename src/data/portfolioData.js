@@ -9,7 +9,7 @@ export const personalInfo = {
     "Currently, I’m expanding my knowledge in TypeScript, backend architecture, and AI integration to build smarter and more optimized applications. I’m always eager to learn new technologies, solve challenging problems, and improve my development skills through real projects and continuous practice.",
     "Beyond coding, I enjoy turning creative ideas into real products that people can actually use and benefit from. I believe in writing clean code, building meaningful solutions, and continuously growing as a developer in the modern tech ecosystem."
   ],
-  avatar: "/images/hardy.png", // custom developer image
+  avatar: "/images/nirr.png", // custom developer image
   resumeUrl: "#",
   socials: {
     github: "https://github.com/Nirjhor07",
@@ -77,36 +77,36 @@ export const techSlider = [
 
 export const projects = [
   {
-    title: "Aura AI - Creative SaaS",
-    description: "A premium artificial intelligence platform combining image generation, copywriting models, and audio transcripts under a unified subscription checkout dashboard.",
-    tech: ["Next.js", "Tailwind CSS", "OpenAI API", "MongoDB", "Framer Motion"],
-    image: "/images/developer.png",
-    github: "#",
-    live: "#"
+    title: "SkillSphere - Online Learning Platform",
+    description: "SkillSphere is a modern online learning platform built with Next.js, React, and MongoDB that allows users to explore courses, learn from instructors, and track their learning progress in a seamless and interactive experience.",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB", "Framer Motion","HTML5", "CSS3", "JavaScript"],
+    image: "/images/skill.png",
+    github: "https://github.com/Nirjhor07/skillsphere_online_learning_platform",
+    live: "https://skillsphere-online-learning-platfor-psi.vercel.app"
   },
   {
-    title: "Quantum Shop - OLED Commerce",
-    description: "An OLED-inspired hyper-fast e-commerce experience utilizing fluid page transitions, spring-physics cart drawers, and state-of-the-art search algorithms.",
-    tech: ["Next.js", "Redux", "Node.js", "PostgreSQL", "GSAP ScrollTrigger"],
-    image: "/images/header_bg.png",
-    github: "#",
-    live: "#"
+    title: "KeenKeeper - Friendship Management Platform",
+    description: "KeenKeeper is a friendship management platform designed to help you stay organized and connected with your social network. Whether you want to track how often you interact with friends, analyze your communication patterns, or simply manage your contacts better—KeenKeeper makes it easy and beautiful.",
+    tech: ["Next.js", "Node.js","daisyUI", "HTML5", "CSS3", "JavaScript","tailwind CSS","mongodb","context API"],
+    image: "/images/Keen.png",
+    github: "https://github.com/Nirjhor07/KeenKeeper-a7",
+    live: "https://keen-keeper-a7-black.vercel.app/"
   },
   {
-    title: "Neuro-Pulse Medical AI",
-    description: "An intelligent healthcare dashboard that processes and visualizes real-time EEG brainwave signals, classifying neural anomalies with 98% accuracy.",
-    tech: ["Python", "TensorFlow", "React", "Socket.io", "Tailwind CSS"],
-    image: "/images/developer.png",
-    github: "#",
-    live: "#"
+    title: "Digital Tools Platform",
+    description: "A modern digital tools e-commerce platform built with React, Vite, and Tailwind CSS. This project highlights premium digital services and features an interactive pricing system along with a user-friendly interface.",
+    tech: ["React", "Vite", "Tailwind CSS","daisyUI","react router"],
+    image: "/images/digi.png",
+    github: "https://github.com/Nirjhor07/my-assignment-6-Digitools-platform",
+    live: "https://digitools-by-nirjhor07.netlify.app/"
   },
   {
-    title: "Stitch Portfolio Builder",
-    description: "A custom real-time browser-based builder that allows developers to arrange, preview, style, and compile modular interactive components dynamically.",
-    tech: ["React", "Tailwind CSS", "Framer Motion", "GSAP", "Vercel SDK"],
-    image: "/images/header_bg.png",
-    github: "#",
-    live: "#"
+    title: "Book Vibes - Book Store",
+    description: "Book Vibes is a modern online book store built with React, Vite, and Tailwind CSS. This project highlights premium digital services and features an interactive pricing system along with a user-friendly interface.",
+    tech: ["React", "Vite", "Tailwind CSS","daisyUI","react router"],
+    image: "/images/book.png",
+    github: "https://github.com/Nirjhor07/-book-vibe-react-route-project-",
+    live: "https://book-vibe-by-nirjhor-akash.netlify.app/"
   }
 ];
 
@@ -134,17 +134,17 @@ export const experience = [
 
 export const testimonials = [
    {
-    quote: "Akash has consistently shown exceptional potential across both technical and entrepreneurial domains. From building real-world business systems to exploring machine learning applications, he demonstrates a rare combination of curiosity, adaptability, and execution. His future in tech looks extremely promising.",
+    quote: "Nirjhor has consistently shown exceptional potential across both technical and entrepreneurial domains. From building real-world business systems to exploring machine learning applications, he demonstrates a rare combination of curiosity, adaptability, and execution. His future in tech looks extremely promising.",
     name: "Former Supervisor",
-    role: "Cargo International Logistics Ltd"
+    role: "Mach10 Holdings Ltd."
   },
   {
-    quote: "He is a fast learner with strong problem-solving ability. During our collaboration, he showed great initiative in handling client communication and product sourcing while managing his studies. With continued focus on technical growth, he has a very strong future ahead.",
+    quote: "Nirjhor is a fast learner with strong problem-solving ability. During our collaboration, he showed great initiative in handling client communication and product sourcing while managing his studies. With continued focus on technical growth, he has a very strong future ahead.",
     name: "Business Partner",
     role: "High Nation (Facebook Business)"
   },
   {
-    quote: "Akash has a strong foundation and clear passion for software and machine learning. If he continues building his skills with this level of dedication, he is on a path toward becoming a highly capable full-stack and AI engineer.",
+    quote: "Nirjhor has a strong foundation and clear passion for software and machine learning. If he continues building his skills with this level of dedication, he is on a path toward becoming a highly capable full-stack and AI engineer.",
     name: "Academic Mentor",
     role: "University Guidance"
   }
