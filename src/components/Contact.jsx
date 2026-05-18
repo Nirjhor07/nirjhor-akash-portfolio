@@ -1,40 +1,79 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Section from './Section';
-import SpotlightCard from './ui/SpotlightCard';
-import MagneticButton from './ui/MagneticButton';
-import { Mail, MapPin, Send, ArrowUpRight } from 'lucide-react';
-import { personalInfo } from '@/data/portfolioData';
+import { useState } from "react";
+import Section from "./Section";
+import SpotlightCard from "./ui/SpotlightCard";
+import MagneticButton from "./ui/MagneticButton";
+import { Mail, MapPin, Send, ArrowUpRight } from "lucide-react";
+import { personalInfo } from "@/data/portfolioData";
 
 export default function Contact() {
-  const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate API call
-    console.log("Form submitted:", formState);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormState({ name: '', email: '', subject: '', message: '' });
-    }, 4000);
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: formState.name,
+          email: formState.email,
+          subject: formState.subject,
+          message: formState.message,
+          from_name: "Portfolio Contact",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormState({ name: "", email: "", subject: "", message: "" });
+        }, 4000);
+      } else {
+        setError(result.message || "Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError(
+        "An error occurred. Please check your connection and try again.",
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <Section id="contact" title="Get In Touch" subtitle="Contact Me">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-        
         {/* Left Column: Details */}
         <div className="lg:col-span-5 flex flex-col justify-between text-left gap-8">
           <div className="flex flex-col gap-6">
             <h3 className="text-xl md:text-3xl font-display font-bold text-display tracking-tight leading-tight">
-              Let's create something extraordinary together.
+              Lets create something extraordinary together.
             </h3>
-            
+
             <p className="text-sm font-light text-on-surface-variant leading-relaxed">
-              Have an exciting project, a role opportunity, or just want to chat about machine learning and full-stack engineering? Shoot me a message, and I'll get back to you within 24 hours.
+              Have an exciting project, a role opportunity, or just want to chat
+              about machine learning and full-stack engineering? Shoot me a
+              message, and I will get back to you within 24 hours.
             </p>
           </div>
 
@@ -46,8 +85,13 @@ export default function Contact() {
                 <Mail className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Write me</span>
-                <a href="mailto:nirjhorakash07@gmail.com" className="text-xs sm:text-sm font-semibold text-display hover:text-tertiary transition-colors duration-300">
+                <span className="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
+                  Write me
+                </span>
+                <a
+                  href="mailto:nirjhorakash07@gmail.com"
+                  className="text-xs sm:text-sm font-semibold text-display hover:text-tertiary transition-colors duration-300"
+                >
                   nirjhorakash07@gmail.com
                 </a>
               </div>
@@ -59,14 +103,16 @@ export default function Contact() {
                 <MapPin className="w-4 h-4" />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Location</span>
+                <span className="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
+                  Location
+                </span>
                 <span className="text-xs sm:text-sm font-semibold text-display">
                   Dhaka, Bangladesh
                 </span>
               </div>
             </div>
           </div>
-          
+
           {/* Quick legal/HUD disclaimer */}
           <span className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant/40 hidden lg:block">
             Secure connection established // SSL active
@@ -88,15 +134,22 @@ export default function Contact() {
                   Message Sent Successfully!
                 </h4>
                 <p className="text-xs text-on-surface-variant max-w-xs font-light">
-                  Thank you for reaching out, Akash will get in touch with you shortly.
+                  Thank you for reaching out, Akash will get in touch with you
+                  shortly.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-left w-full h-full">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-5 text-left w-full h-full"
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name field */}
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="form-name" className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold">
+                    <label
+                      htmlFor="form-name"
+                      className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold"
+                    >
                       Your Name
                     </label>
                     <input
@@ -104,7 +157,9 @@ export default function Contact() {
                       id="form-name"
                       required
                       value={formState.name}
-                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormState({ ...formState, name: e.target.value })
+                      }
                       placeholder="e.g. John Doe"
                       className="w-full bg-background border border-foreground/10 focus:border-primary/50 text-display rounded-xl px-4 py-3.5 text-sm outline-none transition-colors duration-300"
                     />
@@ -112,7 +167,10 @@ export default function Contact() {
 
                   {/* Email field */}
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="form-email" className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold">
+                    <label
+                      htmlFor="form-email"
+                      className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold"
+                    >
                       Email Address
                     </label>
                     <input
@@ -120,7 +178,9 @@ export default function Contact() {
                       id="form-email"
                       required
                       value={formState.email}
-                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormState({ ...formState, email: e.target.value })
+                      }
                       placeholder="e.g. john@example.com"
                       className="w-full bg-background border border-foreground/10 focus:border-primary/50 text-display rounded-xl px-4 py-3.5 text-sm outline-none transition-colors duration-300"
                     />
@@ -129,7 +189,10 @@ export default function Contact() {
 
                 {/* Subject field */}
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="form-subject" className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold">
+                  <label
+                    htmlFor="form-subject"
+                    className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold"
+                  >
                     Subject
                   </label>
                   <input
@@ -137,7 +200,9 @@ export default function Contact() {
                     id="form-subject"
                     required
                     value={formState.subject}
-                    onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
+                    onChange={(e) =>
+                      setFormState({ ...formState, subject: e.target.value })
+                    }
                     placeholder="e.g. Project Collaboration"
                     className="w-full bg-background border border-foreground/10 focus:border-primary/50 text-display rounded-xl px-4 py-3.5 text-sm outline-none transition-colors duration-300"
                   />
@@ -145,7 +210,10 @@ export default function Contact() {
 
                 {/* Message field */}
                 <div className="flex flex-col gap-2 flex-1">
-                  <label htmlFor="form-message" className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold">
+                  <label
+                    htmlFor="form-message"
+                    className="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant font-bold"
+                  >
                     Your Message
                   </label>
                   <textarea
@@ -153,7 +221,9 @@ export default function Contact() {
                     required
                     rows={4}
                     value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormState({ ...formState, message: e.target.value })
+                    }
                     placeholder="Describe your project, timeline, or inquiries..."
                     className="w-full bg-background border border-foreground/10 focus:border-primary/50 text-display rounded-xl px-4 py-3.5 text-sm outline-none transition-colors duration-300 resize-none flex-1 min-h-[120px]"
                   />
@@ -161,12 +231,18 @@ export default function Contact() {
 
                 {/* Submit button */}
                 <div className="pt-2">
+                  {error && (
+                    <div className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-xs">
+                      {error}
+                    </div>
+                  )}
                   <MagneticButton className="w-full sm:w-auto">
                     <button
                       type="submit"
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 bg-foreground hover:bg-tertiary text-background hover:text-black font-semibold uppercase tracking-wider text-xs px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-tertiary/20"
+                      disabled={loading}
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 bg-foreground hover:bg-tertiary text-background hover:text-black font-semibold uppercase tracking-wider text-xs px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-tertiary/20 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send Message
+                      {loading ? "Sending..." : "Send Message"}
                       <ArrowUpRight className="w-4 h-4" />
                     </button>
                   </MagneticButton>
@@ -175,7 +251,6 @@ export default function Contact() {
             )}
           </SpotlightCard>
         </div>
-
       </div>
     </Section>
   );
