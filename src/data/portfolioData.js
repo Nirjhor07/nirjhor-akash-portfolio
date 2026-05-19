@@ -50,22 +50,22 @@ export const services = [
 
 export const techStack = {
   frontend: [
-    { name: "React / Next.js", level: 95 },
-    { name: "Tailwind CSS", level: 98 },
-    { name: "Framer Motion & GSAP", level: 90 },
-    { name: "Redux Toolkit", level: 85 },
+    { name: "React / Next.js", level: 70 },
+    { name: "Tailwind CSS", level: 70 },
+    { name: "Framer Motion & GSAP", level: 50 },
+    { name: "Redux Toolkit", level: 55 },
   ],
   backend: [
-    { name: "Node.js & Express", level: 90 },
-    { name: "MongoDB", level: 92 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "REST & GraphQL APIs", level: 88 },
+    { name: "Node.js & Express", level: 60 },
+    { name: "MongoDB", level: 72 },
+    { name: "PostgreSQL", level: 50 },
+    { name: "REST & GraphQL APIs", level: 68 },
   ],
   machineLearning: [
-    { name: "Python (TensorFlow & PyTorch)", level: 85 },
-    { name: "Scikit-Learn", level: 90 },
-    { name: "Data Science & Pandas", level: 88 },
-    { name: "Computer Vision & NLP", level: 80 },
+    { name: "Python (TensorFlow & PyTorch)", level: 75 },
+    { name: "Scikit-Learn", level: 60 },
+    { name: "Data Science & Pandas", level: 68 },
+    { name: "Computer Vision & NLP", level: 60 },
   ],
 };
 

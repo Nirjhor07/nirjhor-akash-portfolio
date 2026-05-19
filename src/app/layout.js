@@ -17,12 +17,12 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "NR7 | Full Stack Developer & ML Enthusiast",
+  title: "nr7 | Full Stack Developer | portfolio",
   description: "Explore the premium portfolio of NR7 (Ashraf Hossain Akash) - Full Stack Web Developer & Machine Learning Enthusiast. Showcasing pixel-perfect React interfaces, high-performance Node APIs, and intelligent ML models.",
   keywords: "Nirjhor Akash, Ashraf Hossain Akash, NR7, Portfolio, Full Stack Developer, Machine Learning, Next.js, Framer Motion, GSAP",
   authors: [{ name: "Ashraf Hossain Akash", url: "https://github.com/nirjhorakash" }],
   openGraph: {
-    title: "NR7 | Full Stack Developer & ML Enthusiast",
+    title: "nr7 | Full Stack Developer",
     description: "Welcome to my portfolio. I build high-performance, beautiful, and intelligent web applications.",
     url: "https://nirjhor-akash-portfolio.vercel.app",
     type: "website",
