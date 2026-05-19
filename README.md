@@ -6,15 +6,6 @@ A modern, interactive, and responsive portfolio website showcasing full-stack de
 
 This is a professional portfolio built with cutting-edge web technologies to demonstrate expertise in full-stack development, AI integration, and beautiful UI design. The portfolio features smooth animations, interactive components, and a seamless user experience.
 
-## Author
-
-**Ashraf Hossain Akash** (Nirjhor)  
-Full Stack Developer | Machine Learning Enthusiast | Creative Engineer
-
-- **GitHub**: [@Nirjhor07](https://github.com/Nirjhor07)
-- **LinkedIn**: [@nirjhor07](https://www.linkedin.com/in/nirjhor07)
-- **Portfolio**: [nirjhor-akash-portfolio.vercel.app](https://nirjhor-akash-portfolio.vercel.app)
-
 ## Tech Stack
 
 ### Frontend
@@ -26,22 +17,6 @@ Full Stack Developer | Machine Learning Enthusiast | Creative Engineer
 - **GSAP** - Advanced animation toolkit
 - **Lucide React** - Beautiful icon library
 - **Lenis** - Smooth scrolling library
-
-### Backend & Tools
-
-- **Node.js** - JavaScript runtime
-- **Express** - Backend framework
-- **MongoDB** - NoSQL database
-- **PostgreSQL** - Relational database
-- **GraphQL & REST APIs** - API development
-
-### Machine Learning
-
-- **Python** - Primary ML language
-- **TensorFlow & PyTorch** - Deep learning frameworks
-- **Scikit-Learn** - Machine learning library
-- **Pandas** - Data analysis
-- **Computer Vision & NLP** - Specialized ML domains
 
 ### Development Tools & Services
 
@@ -158,37 +133,6 @@ npm start
 - **Testimonials** - Client feedback and reviews
 - **Contact** - Get in touch form powered by Web3Forms with email notifications
 
-## Stats
-
-- **1+ Years** - Professional Development Experience
-- **21+ Projects** - Completed Projects
-- **91%** - ML Model Accuracy
-- **500+** - Git Contributions
-
-## Featured Projects
-
-1. **SkillSphere** - Online Learning Platform
-   - Built with Next.js, MongoDB, Framer Motion
-   - [Live Demo](https://skillsphere-online-learning-platfor-psi.vercel.app)
-
-2. **KeenKeeper** - Friendship Management Platform
-   - Full-stack application with authentication
-   - [Live Demo](https://keen-keeper-a7-black.vercel.app/)
-
-3. **Digital Tools Platform** - E-commerce Solution
-   - Modern UI with React and Tailwind CSS
-   - [Live Demo](https://digitools-by-nirjhor07.netlify.app/)
-
-4. **Book Vibes** - Online Book Store
-   - Interactive book browsing and catalog
-   - [Live Demo](https://book-vibe-by-nirjhor-akash.netlify.app/)
-
-## Services Offered
-
-- **Full Stack Development** - End-to-end web applications with modern tech stack
-- **Machine Learning Solutions** - AI-powered features and intelligent systems
-- **Creative UI/UX Engineering** - Beautiful, interactive, and responsive interfaces
-
 ## Design Highlights
 
 - **Spotlight Cards** - Interactive spotlight effect on hover
@@ -199,7 +143,7 @@ npm start
 - **Tech Stack Carousel** - Infinite scrolling animation with Lucide icons
 - **Web3Forms Integration** - Serverless email form submission
 
-## 📧 Contact Form
+## Contact Form
 
 The portfolio includes a fully functional contact form powered by **Web3Forms**, a free serverless email service:
 
