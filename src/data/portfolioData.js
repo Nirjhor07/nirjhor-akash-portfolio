@@ -10,7 +10,7 @@ export const personalInfo = {
     "Currently, I’m expanding my knowledge in TypeScript, backend architecture, and AI integration to build smarter and more optimized applications. I’m always eager to learn new technologies, solve challenging problems, and improve my development skills through real projects and continuous practice.",
     "Beyond coding, I enjoy turning creative ideas into real products that people can actually use and benefit from. I believe in writing clean code, building meaningful solutions, and continuously growing as a developer in the modern tech ecosystem.",
   ],
-  avatar: "/images/nirr.PNG", // custom developer image
+  avatar: "/images/nirjhor.png", // custom developer image
   resumeUrl: "#",
   socials: {
     github: "https://github.com/Nirjhor07",
