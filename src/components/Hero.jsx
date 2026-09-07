@@ -5,6 +5,7 @@ import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import MagneticButton from './ui/MagneticButton';
 import AnimatedBlob from './ui/AnimatedBlob';
 import { personalInfo } from '@/data/portfolioData';
+import Image from 'next/image';
 
 export default function Hero() {
   const containerVariants = {
@@ -172,7 +173,14 @@ export default function Hero() {
 
             {/* Profile Image with high tech borders */}
             <div className="absolute inset-4 rounded-2xl overflow-hidden border border-foreground/5 bg-surface-dim/60 flex items-center justify-center">
-              <img
+              <Image
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
+                placeholder="blur"
+                blurDataURL="/images/avatar-blur.png"
+                style={{ objectFit: 'cover' }}
                 src={personalInfo.avatar}
                 alt={personalInfo.name}
                 className="w-full h-full object-cover grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"

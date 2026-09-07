@@ -48,24 +48,204 @@ export const services = [
   },
 ];
 
+export const skillCategories = [
+  {
+    id: "frontend",
+    title: "Frontend Architecture",
+    tagline: "High-performance reactive interfaces & motion design systems",
+    accent: "purple",
+    glowColor: "rgba(208, 188, 255, 0.12)",
+    badgeColor: "text-purple-400 bg-purple-500/10 border-purple-500/20",
+    skills: [
+      {
+        name: "Next.js & React 19",
+        role: "App Router, SSR, Server Components & Hooks",
+        icon: "Zap",
+        projects: ["StudyNook", "Ticket Lagbe", "SkillSphere"],
+        highlight: "Core Full-Stack",
+      },
+      {
+        name: "Tailwind CSS & Design Tokens",
+        role: "Modern HUD tokens, responsive layouts & themes",
+        icon: "Layout",
+        projects: ["StudyNook", "Ticket Lagbe", "KeenKeeper"],
+        highlight: "Design Systems",
+      },
+      {
+        name: "Framer Motion & GSAP",
+        role: "Kinetic UI animations, smooth scroll & physics",
+        icon: "Sparkles",
+        projects: ["SkillSphere", "Portfolio UI"],
+        highlight: "Motion Design",
+      },
+      {
+        name: "Modern JavaScript (ES6+)",
+        role: "Asynchronous runtime, modular architecture & DOM",
+        icon: "Code2",
+        projects: ["QR Generator", "KeenKeeper"],
+        highlight: "Core Language",
+      },
+      {
+        name: "Redux Toolkit & Context API",
+        role: "Predictable centralized state & session pipelines",
+        icon: "Layers",
+        projects: ["KeenKeeper", "Digital Tools"],
+        highlight: "State Architecture",
+      },
+    ],
+  },
+  {
+    id: "backend",
+    title: "Backend & Systems",
+    tagline: "High-throughput APIs, database architecture & secure auth",
+    accent: "blue",
+    glowColor: "rgba(173, 198, 255, 0.12)",
+    badgeColor: "text-blue-400 bg-blue-500/10 border-blue-500/20",
+    skills: [
+      {
+        name: "Node.js & Express.js",
+        role: "RESTful architecture, middleware routing & controllers",
+        icon: "Server",
+        projects: ["StudyNook", "Ticket Lagbe", "KeenKeeper"],
+        highlight: "API Services",
+      },
+      {
+        name: "MongoDB & Mongoose",
+        role: "Document modeling, aggregation pipelines & indexing",
+        icon: "Database",
+        projects: ["StudyNook", "Ticket Lagbe", "SkillSphere"],
+        highlight: "NoSQL Database",
+      },
+      {
+        name: "Better Auth & JWT",
+        role: "OAuth, session tokens & role-based access control (RBAC)",
+        icon: "ShieldCheck",
+        projects: ["StudyNook", "Ticket Lagbe"],
+        highlight: "Auth & Security",
+      },
+      {
+        name: "Stripe Payment Gateway",
+        role: "Checkout workflows, automated settlements & webhooks",
+        icon: "CreditCard",
+        projects: ["Ticket Lagbe"],
+        highlight: "Fintech Settlement",
+      },
+      {
+        name: "PostgreSQL & SQL",
+        role: "Relational data structures & ACID query integrity",
+        icon: "Binary",
+        projects: ["Backend Research"],
+        highlight: "Relational DB",
+      },
+    ],
+  },
+  {
+    id: "ai_ml",
+    title: "AI & Intelligence",
+    tagline: "Machine learning models, forecasting & data pipelines",
+    accent: "cyan",
+    glowColor: "rgba(0, 219, 231, 0.12)",
+    badgeColor: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+    skills: [
+      {
+        name: "Python (TensorFlow & PyTorch)",
+        role: "Neural networks, model architectures & training loops",
+        icon: "BrainCircuit",
+        projects: ["ML Research", "Cargo Forecasting"],
+        highlight: "Deep Learning",
+      },
+      {
+        name: "Scikit-Learn",
+        role: "Classification, regression models & evaluation metrics",
+        icon: "Cpu",
+        projects: ["Logistics Forecasting Model"],
+        highlight: "Predictive AI",
+      },
+      {
+        name: "Pandas & NumPy",
+        role: "High-dimensional data wrangling, transforms & EDA",
+        icon: "Gauge",
+        projects: ["Supply Chain Analytics"],
+        highlight: "Data Engineering",
+      },
+      {
+        name: "Computer Vision & NLP",
+        role: "Text embeddings, NLP tokenization & image processing",
+        icon: "Workflow",
+        projects: ["AI Explorations"],
+        highlight: "Applied Vision/NLP",
+      },
+    ],
+  },
+  {
+    id: "tools",
+    title: "Ecosystem & DevOps",
+    tagline: "Deployment infrastructure, testing & developer workflows",
+    accent: "emerald",
+    glowColor: "rgba(52, 211, 153, 0.12)",
+    badgeColor: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+    skills: [
+      {
+        name: "Git & GitHub Workflows",
+        role: "Branch strategies, collaborative PRs & version tracking",
+        icon: "GitBranch",
+        projects: ["All Repositories"],
+        highlight: "Version Control",
+      },
+      {
+        name: "Vercel & Netlify Edge",
+        role: "Edge functions, global CDN deployment & CI/CD",
+        icon: "Globe",
+        projects: ["StudyNook", "Ticket Lagbe", "SkillSphere"],
+        highlight: "Cloud & Edge",
+      },
+      {
+        name: "Postman & API Testing",
+        role: "Endpoint debugging, environment variables & testing",
+        icon: "Terminal",
+        projects: ["Express Endpoints"],
+        highlight: "API Quality",
+      },
+      {
+        name: "Vite & Build Tooling",
+        role: "Fast HMR environments & production optimization",
+        icon: "Boxes",
+        projects: ["Digital Tools", "Book Vibes"],
+        highlight: "Build Tooling",
+      },
+    ],
+  },
+];
+
+// Backwards-compatible export for any legacy references
 export const techStack = {
-  frontend: [
-    { name: "React / Next.js", level: 70 },
-    { name: "Tailwind CSS", level: 70 },
-    { name: "Framer Motion & GSAP", level: 50 },
-    { name: "Redux Toolkit", level: 55 },
+  frontend: skillCategories[0].skills,
+  backend: skillCategories[1].skills,
+  machineLearning: skillCategories[2].skills,
+  tools: skillCategories[3].skills,
+};
+
+export const techTickerRows = {
+  row1: [
+    { name: "Next.js 16", role: "App Router & SSR", tag: "SSR / SSG", icon: "Zap", accent: "cyan" },
+    { name: "React 19", role: "Hooks & Concurrent UI", tag: "Core UI", icon: "Atom", accent: "purple" },
+    { name: "Tailwind CSS", role: "Design Tokens & HUD", tag: "Styling", icon: "Wind", accent: "cyan" },
+    { name: "Framer Motion", role: "Kinetic Physics & HUD", tag: "Motion", icon: "Sparkles", accent: "purple" },
+    { name: "HeroUI & DaisyUI", role: "Component Engineering", tag: "UI Kit", icon: "Layout", accent: "blue" },
+    { name: "GSAP & Lenis", role: "Smooth Kinetic Scroll", tag: "Interactions", icon: "Gauge", accent: "emerald" },
+    { name: "JavaScript (ES6+)", role: "Async Runtime & DOM", tag: "Language", icon: "Code2", accent: "amber" },
+    { name: "Redux & Context", role: "State Pipelines & Stores", tag: "State", icon: "Layers", accent: "purple" },
   ],
-  backend: [
-    { name: "Node.js & Express", level: 60 },
-    { name: "MongoDB", level: 72 },
-    { name: "PostgreSQL", level: 50 },
-    { name: "REST & GraphQL APIs", level: 68 },
-  ],
-  machineLearning: [
-    { name: "Python (TensorFlow & PyTorch)", level: 75 },
-    { name: "Scikit-Learn", level: 60 },
-    { name: "Data Science & Pandas", level: 68 },
-    { name: "Computer Vision & NLP", level: 60 },
+  row2: [
+    { name: "Node.js & Express", role: "RESTful API Controllers", tag: "API Engine", icon: "Server", accent: "emerald" },
+    { name: "MongoDB & Mongoose", role: "Document DB & Aggregations", tag: "NoSQL DB", icon: "Database", accent: "emerald" },
+    { name: "Better Auth & JWT", role: "OAuth, Sessions & RBAC", tag: "Security", icon: "ShieldCheck", accent: "blue" },
+    { name: "Stripe API", role: "Checkout & Settlement Webhooks", tag: "Fintech", icon: "CreditCard", accent: "purple" },
+    { name: "Python & PyTorch", role: "Neural Deep Architectures", tag: "AI / ML", icon: "BrainCircuit", accent: "cyan" },
+    { name: "Scikit-Learn", role: "Forecasting & Predictive Models", tag: "Data Models", icon: "Cpu", accent: "blue" },
+    { name: "Pandas & NumPy", role: "Data Cleansing & Transforms", tag: "Data Science", icon: "Binary", accent: "cyan" },
+    { name: "Vercel Edge & CI/CD", role: "Global Cloud CDN & Edge", tag: "Cloud Edge", icon: "Globe", accent: "emerald" },
+    { name: "Postman", role: "Endpoint Contract Testing", tag: "API QA", icon: "Terminal", accent: "amber" },
   ],
 };
 
@@ -82,6 +262,8 @@ export const techSlider = [
 export const projects = [
   {
     title: "StudyNook — Modern Room-Booking Platform",
+    category: "Full Stack",
+    featured: true,
     description:
       "StudyNook is a full-stack reservation engine designed to connect students and professionals with quiet workspaces. It features dynamic room discovery, interval-overlap booking validation to eliminate double-bookings, secure OAuth/JWT authentication, and self-service dashboards for both hosts and students.",
     tech: [
@@ -101,6 +283,8 @@ export const projects = [
   },
   {
     title: "Ticket Lagbe — Multi-Tenant Ticketing Platform",
+    category: "Full Stack",
+    featured: true,
     description:
       "A full-stack, multi-tenant reservation system built with Next.js, Express.js, and MongoDB. Features strict role-based access control (RBAC) across admins, vendors, and users, supporting end-to-end workflows including listing verification, vendor reservation approval, Recharts analytics, and Stripe payment settlement.",
     tech: [
@@ -121,6 +305,8 @@ export const projects = [
   },
   {
     title: "SkillSphere - Online Learning Platform",
+    category: "Full Stack",
+    featured: false,
     description:
       "SkillSphere is a modern online learning platform built with Next.js, React, and MongoDB that allows users to explore courses, learn from instructors, and track their learning progress in a seamless and interactive experience.",
     tech: [
@@ -138,6 +324,8 @@ export const projects = [
   },
   {
     title: "KeenKeeper - Friendship Management Platform",
+    category: "Full Stack",
+    featured: false,
     description:
       "KeenKeeper is a friendship management platform designed to help you stay organized and connected with your social network. Whether you want to track how often you interact with friends, analyze your communication patterns, or simply manage your contacts better—KeenKeeper makes it easy and beautiful.",
     tech: [
@@ -147,9 +335,9 @@ export const projects = [
       "HTML5",
       "CSS3",
       "JavaScript",
-      "tailwind CSS",
-      "mongodb",
-      "context API",
+      "Tailwind CSS",
+      "MongoDB",
+      "Context API",
     ],
     image: "/images/Keen.png",
     github: "https://github.com/Nirjhor07/KeenKeeper-a7",
@@ -157,6 +345,8 @@ export const projects = [
   },
   {
     title: "QR Code Generator — Static & Client-Side Utility",
+    category: "Utility",
+    featured: false,
     description:
       "A fast, browser-based QR code generator built with Vanilla JS and Tailwind CSS that creates static, permanent codes with no backend dependency. Supports multiple payload types—including URLs, vCards, plain text, and Google Maps locations with coordinate extraction—alongside custom colors, dimensions, and logo embedding.",
     tech: ["JavaScript", "HTML5", "Tailwind CSS"],
@@ -166,18 +356,22 @@ export const projects = [
   },
   {
     title: "Digital Tools Platform",
+    category: "Frontend",
+    featured: false,
     description:
       "A modern digital tools e-commerce platform built with React, Vite, and Tailwind CSS. This project highlights premium digital services and features an interactive pricing system along with a user-friendly interface.",
-    tech: ["React", "Vite", "Tailwind CSS", "daisyUI", "react router"],
+    tech: ["React", "Vite", "Tailwind CSS", "daisyUI", "React Router"],
     image: "/images/digi.png",
     github: "https://github.com/Nirjhor07/my-assignment-6-Digitools-platform",
     live: "https://digitools-by-nirjhor07.netlify.app/",
   },
   {
     title: "Book Vibes - Book Store",
+    category: "Frontend",
+    featured: false,
     description:
       "Book Vibes is a modern online book store built with React, Vite, and Tailwind CSS. This project highlights premium digital services and features an interactive pricing system along with a user-friendly interface.",
-    tech: ["React", "Vite", "Tailwind CSS", "daisyUI", "react router"],
+    tech: ["React", "Vite", "Tailwind CSS", "daisyUI", "React Router"],
     image: "/images/book.png",
     github: "https://github.com/Nirjhor07/-book-vibe-react-route-project-",
     live: "https://book-vibe-by-nirjhor-akash.netlify.app/",
