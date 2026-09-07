@@ -81,6 +81,45 @@ export const techSlider = [
 
 export const projects = [
   {
+    title: "StudyNook — Modern Room-Booking Platform",
+    description:
+      "StudyNook is a full-stack reservation engine designed to connect students and professionals with quiet workspaces. It features dynamic room discovery, interval-overlap booking validation to eliminate double-bookings, secure OAuth/JWT authentication, and self-service dashboards for both hosts and students.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "HeroUI",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "JWT",
+    ],
+    image: "/images/studyNook.png",
+    github: "https://github.com/Nirjhor07/assignment_9_studynook_client",
+    live: "https://assignment-9-studynook-client.vercel.app",
+  },
+  {
+    title: "Ticket Lagbe — Multi-Tenant Ticketing Platform",
+    description:
+      "A full-stack, multi-tenant reservation system built with Next.js, Express.js, and MongoDB. Features strict role-based access control (RBAC) across admins, vendors, and users, supporting end-to-end workflows including listing verification, vendor reservation approval, Recharts analytics, and Stripe payment settlement.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "HeroUI",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "Stripe",
+      "Recharts",
+    ],
+    image: "/images/ticket-lagbe.png",
+    github: "https://github.com/Nirjhor07/ticket-lagbe",
+    live: "https://ticket-lagbe.vercel.app",
+  },
+  {
     title: "SkillSphere - Online Learning Platform",
     description:
       "SkillSphere is a modern online learning platform built with Next.js, React, and MongoDB that allows users to explore courses, learn from instructors, and track their learning progress in a seamless and interactive experience.",
@@ -115,6 +154,15 @@ export const projects = [
     image: "/images/Keen.png",
     github: "https://github.com/Nirjhor07/KeenKeeper-a7",
     live: "https://keen-keeper-a7-black.vercel.app/",
+  },
+  {
+    title: "QR Code Generator — Static & Client-Side Utility",
+    description:
+      "A fast, browser-based QR code generator built with Vanilla JS and Tailwind CSS that creates static, permanent codes with no backend dependency. Supports multiple payload types—including URLs, vCards, plain text, and Google Maps locations with coordinate extraction—alongside custom colors, dimensions, and logo embedding.",
+    tech: ["JavaScript", "HTML5", "Tailwind CSS"],
+    image: "/images/qr-code.png",
+    github: "https://github.com/Nirjhor07/Qr-Code-Generator-By-Nirjhor-Akash",
+    live: "https://nirjhor07.github.io/Qr-Code-Generator-By-Nirjhor-Akash/",
   },
   {
     title: "Digital Tools Platform",
